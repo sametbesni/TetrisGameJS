@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #tetris-title {
+            font-size: 24px;
+            color: #FF8E0D;
+            margin-bottom: 10px;
+        }
+        canvas {
+            border: 1px solid #fff;
+            background-color: #111;
+        }
+        #controls {
+            display: flex;
+            justify-content: space-between;
+            width: 240px;
+            margin-top: 10px;
+        }
+        #next-piece, #score-board {
+            margin: 10px;
+            text-align: center;
+        }
+        .button {
+            background-color: #444;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .piece {
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.934);
+        }
+    </style>
+</head>
+<body>
+    <div class="game">
+        <div id="game-container">
+            <div id="tetris-title">TETRIS GAME</div>
+            <canvas id="tetris" width="240" height="400"></canvas>
+            <div id="next-piece" class="preview-box">
+                <canvas id="next" width="80" height="80"></canvas>
+            </div>
+            <div id="controls">
+                <button class="button" id="pause">Pause</button>
+                <button class="button" id="play">Play</button>
+                <button class="button" id="refresh">New Game</button>
+            </div>
+            <div id="score-board" class="score-box">
+                <div>Level: <span id="level">1</span></div>
+                <div>Score: <span id="score">0</span></div>
+                <div>High Score: <span id="high-score">0</span></div>
+            </div>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
