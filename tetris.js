@@ -339,10 +339,8 @@ document.addEventListener('keydown', event => {
 });
 
 function gameLoop() {
-    // ... mevcut kodlar ...
     drawNextPiece(nextPiece);
     updateScoreBoard(currentScore, currentLevel, highScore);
-    // ... mevcut kodlar ...
 }
 
 playerReset();
